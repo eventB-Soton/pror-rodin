@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.rodinp.core.rodin"
+            id="RifFile"
+            name="RIF Requirements File"
+            priority="normal">
+      </content-type>
+      <file-association
+            content-type="org.pror.rodin.RifFile"
+            file-extensions="rif,rif-xmi">
+      </file-association>
+   </extension>
+   <extension
+         point="org.rodinp.core.fileAssociations">
+      <fileAssociation
+            content-type-id="org.pror.rodin.RifFile"
+            root-element-type="org.pror.rodin.RifFile">
+      </fileAssociation>
+   </extension>
+   <extension
+         point="org.rodinp.core.internalElementTypes">
+      <internalElementType
+            class="org.pror.rodin.navigator.RifFile"
+            id="RifFile"
+            name="RIF Requirements File">
+      </internalElementType>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="org.pror.rodin.navigator.ContentProvider"
+            id="org.pror.rodin.navigatorContent"
+            labelProvider="org.pror.rodin.navigator.LabelProvider"
+            name="RIF Navigator Content">
+         <triggerPoints>
+            <instanceof
+                  value="org.eclipse.core.resources.IProject">
+            </instanceof>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof
+                  value="org.pror.rodin.navigator.RifFile">
+            </instanceof>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            class="fr.systerel.internal.explorer.navigator.actionProviders.RootActionProvider"
+            id="org.pror.rodin.actionProviders.file">
+         <enablement>
+            <instanceof
+                  value="org.pror.rodin.navigator.RifFile">
+            </instanceof>
+         </enablement>
+      </actionProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding
+            viewerId="fr.systerel.explorer.navigator.view">
+         <includes>
+            <contentExtension
+                  pattern="org.pror.rodin.navigatorContent">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding
+            viewerId="fr.systerel.explorer.navigator.view">
+         <includes>
+            <actionExtension
+                  pattern="org.pror.rodin.actionProviders.file">
+            </actionExtension>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+</plugin>

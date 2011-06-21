@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.pror.presentation.wrspm.xtext
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: org.pror.presentation.wrspm.xtext; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ com.ibm.icu;resolution:=optional,
+ org.eclipse.xtext.xtend;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.pror.presentation.wrspm.xtext,
+ org.pror.presentation.wrspm.xtext.services,
+ org.pror.presentation.wrspm.xtext.wrspmDomainmodel,
+ org.pror.presentation.wrspm.xtext.wrspmDomainmodel.impl,
+ org.pror.presentation.wrspm.xtext.wrspmDomainmodel.util,
+ org.pror.presentation.wrspm.xtext.parseTreeConstruction,
+ org.pror.presentation.wrspm.xtext.parser.antlr,
+ org.pror.presentation.wrspm.xtext.parser.antlr.internal,
+ org.pror.presentation.wrspm.xtext.validation

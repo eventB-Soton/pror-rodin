@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.pror.presentation.rodin.phenomenon/src"
+    editDirectory="/org.pror.presentation.rodin.phenomenon/src" modelPluginID="org.pror.presentation.rodin.phenomenon"
+    modelName="Phenomenon" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" usedGenPackages="../../org.pror.ui/model/ui.genmodel#//ui ../../org.pror.ui/model/ui.genmodel#//reqif">
+  <foreignModel>phenomenon.ecore</foreignModel>
+  <genPackages prefix="Phenomenon" basePackage="org.pror.presentation.rodin" disposableProviderFactory="true"
+      generateExampleClass="false" ecorePackage="phenomenon.ecore#/">
+    <genClasses image="false" ecoreClass="phenomenon.ecore#//PhenomenonHighlightConfiguration"/>
+    <genClasses image="false" ecoreClass="phenomenon.ecore#//PhenomenonDescriptorConfiguration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference phenomenon.ecore#//PhenomenonDescriptorConfiguration/specificationsHoldingPhenomena"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference phenomenon.ecore#//PhenomenonDescriptorConfiguration/specObjectType"/>
+      <genOperations ecoreOperation="phenomenon.ecore#//PhenomenonDescriptorConfiguration/isConfiguredCorrectly">
+        <genParameters ecoreParameter="phenomenon.ecore#//PhenomenonDescriptorConfiguration/isConfiguredCorrectly/diagnostics"/>
+        <genParameters ecoreParameter="phenomenon.ecore#//PhenomenonDescriptorConfiguration/isConfiguredCorrectly/context"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

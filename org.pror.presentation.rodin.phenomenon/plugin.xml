@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://pror.org/presentation/phenomenon"
+            class="org.pror.presentation.rodin.phenomenon.provider.PhenomenonItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://pror.org/presentation/phenomenon"
+            class="org.pror.presentation.rodin.phenomenon.PhenomenonPackage"
+            genModel="model/phenomenon.genmodel"/>
+   </extension>
+   <extension
+         point="org.pror.ui.presentation">
+      <presentation
+            name="Event-B Phenomenon Highlighting"
+            service="org.pror.presentation.rodin.phenomenon.core.PhenomenonHighlightService">
+      </presentation>
+      <presentation
+            name="Event-B Phenomenon Description"
+            service="org.pror.presentation.rodin.phenomenon.core.PhenomenonDescriptionService">
+      </presentation>
+   </extension>
+
+</plugin>

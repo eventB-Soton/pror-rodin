@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.pror.ui.presentation">
+      <presentation
+            name="WRSPM Presentation"
+            service="org.pror.presentation.wrspm.WRSPMService">
+      </presentation>
+   </extension>
+   <extension
+         point="de.itemis.pror.presentation.xtext.configuration">
+      <xtext
+            extension="wrspm"
+            injector="org.pror.presentation.wrspm.WrspmXtextInjector"
+            language="org.pror.presentation.wrspm.xtext.WrspmDomainmodel">
+      </xtext>
+   </extension>
+
+</plugin>

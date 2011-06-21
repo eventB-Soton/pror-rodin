@@ -1,0 +1,20 @@
+grammar org.pror.presentation.wrspm.xtext.WrspmDomainmodel with org.eclipse.xtext.common.Terminals
+
+generate wrspmDomainmodel "http://www.pror.org/presentation/wrspm/xtext/WrspmDomainmodel"
+
+DomainModel:
+  (elements+=Part)*;
+  
+Part:
+  Entity | Definition | AnyText;
+
+AnyText:
+  content=ID;
+
+Entity:
+  '[' ref=[Definition] ']';
+
+Definition:
+  '[[' name=ID ']]';
+
+// terminal TEXT:   !('['|']')+;
