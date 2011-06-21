@@ -1,0 +1,9 @@
+== ProR - Rodin Integration ==
+
+This project provides an integration for [http://pror.org ProR] and [http://www.event-b.org Rodin], both Eclipse-based applications:
+
+* '''[http://pror.org ProR]''' is a platform for Requirements Engineering, based on the RIF/ReqIF standard.
+* '''[http://www.event-b.org Rodin]''' is a platform for formal modeling using the Event-B formal method.
+
+To use this project, you also need the ProR and Rodin source code.  The details are documented on the [http://pror.org ProR Website].
+
