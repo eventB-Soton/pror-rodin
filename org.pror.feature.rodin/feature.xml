@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.pror.feature.rodin"
+      label="ProR for Rodin"
+      version="6.0.0"
+      provider-name="Heinrich-Heine University Düsseldorf">
+
+   <description url="http://www.example.com/description">
+      This Feature contains Adapters and Presentations for ProR for
+the Rodin Platform.
+REVISION HISTORY
+6.0.0
+-----
+New release to support core-8.0.0
+5.0.2
+-----
+Bug Fixes
+5.0.1
+-----
+Added dependency to core as a feature
+5.0.0
+-----
+New release to support core-7.0.0
+4.1.0
+-----
+New release to support core-6.0.0
+4.0.0
+-----
+Rodin Integration now works with Drag&amp;Drop
+3.4.0
+-----
+Bug fixes in Rodin integration code.
+3.1.0
+-----
+Some Plugins were merged.  No user visible changes.
+3.0.0
+-----
+Adaption to the new Specification View
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      (c) 2010 Lehrstuhl fuer Softwaretechnik und Programmiersprachen,
+Heinrich Heine Universitaet Duesseldorf (STUPS) and others.
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      Eclipse Public License - v 1.0
+All rights reserved.   This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+   </license>
+
+   <url>
+      <update label="ProR Update Site" url="http://update.pror.org/"/>
+      <discovery label="ProR Homepage" url="http://pror.org"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui" version="3.6.0" match="compatible"/>
+      <import plugin="org.rodinp.core" version="1.3.1" match="compatible"/>
+      <import plugin="org.eclipse.core.runtime" version="3.6.0" match="compatible"/>
+      <import plugin="fr.systerel.explorer" version="1.3.1" match="compatible"/>
+      <import plugin="org.eventb.emf.persistence" version="2.2.0" match="compatible"/>
+      <import plugin="org.pror.presentation.linewrap" version="5.0.0" match="compatible"/>
+      <import feature="org.pror.feature.core" version="8.0.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="org.pror.rodin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.pror.presentation.rodin.phenomenon"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
